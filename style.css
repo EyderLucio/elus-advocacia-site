@@ -1,96 +1,104 @@
 
+html { scroll-behavior: smooth; }
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fefefe;
-  color: #3e2723;
+  margin: 0; padding: 0;
+  background: #fefefe; color: #3e2723;
 }
 header {
   background: #3e2723;
   padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
-header .logo {
-  max-width: 120px;
-}
+header .logo { max-width: 120px; }
 header nav a {
-  color: #fff;
-  margin-left: 15px;
-  text-decoration: none;
-  font-weight: 600;
+  color: #fff; margin-left: 20px;
+  text-decoration: none; font-weight: 600;
+  transition: color 0.3s;
 }
+header nav a:hover { color: #d4af37; }
 .hero {
-  position: relative;
-  overflow: hidden;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative; overflow: hidden;
+  height: 70vh; display: flex;
+  align-items: center; justify-content: center;
   color: #3e2723;
 }
 .hero video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0.4;
+  position: absolute; top: 50%; left: 50%;
+  min-width: 100%; min-height: 100%;
+  transform: translate(-50%, -50%); opacity: 0.4;
 }
 .hero-content {
-  position: relative;
-  text-align: center;
+  position: relative; text-align: center;
   padding: 0 20px;
 }
-.hero-content h1 {
-  font-size: 2.5em;
-  margin-bottom: 5px;
-}
-.hero-content h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
+.hero-content h1 { font-size: 2.8em; margin-bottom: 5px; }
+.hero-content h2 { font-size: 1.6em; margin-bottom: 10px; }
+.hero-content p { margin: 12px 0; line-height: 1.4; }
 .btn {
-  background: #3e2723;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  margin-top: 15px;
+  background: #3e2723; color: #fff;
+  padding: 12px 24px; border-radius: 30px;
+  text-decoration: none; display: inline-flex;
+  align-items: center; margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .btn:hover {
-  background: #5d4037;
+  background: #5d4037; transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
-.whatsapp-icon {
-  width: 20px;
-  margin-right: 8px;
-}
+.whatsapp-icon { width: 20px; margin-right: 8px; }
 .sobre-bio {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: center;
+  padding: 40px 20px;
 }
-.sobre-bio .bio-text {
-  flex: 1 1 300px;
-  padding: 10px;
-}
-.sobre-bio .bio-img {
-  flex: 1 1 200px;
-  padding: 10px;
-}
+.sobre-bio .bio-text { flex: 1 1 300px; padding: 10px; }
+.sobre-bio .bio-img { flex: 0 0 auto; padding: 10px; }
 .small-photo {
-  max-width: 200px;
-  border-radius: 8px;
+  max-width: 200px; border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+#servicos {
+  padding: 40px 20px; text-align: center;
+}
+.servicos-list {
+  list-style: none; padding: 0; margin-bottom: 30px;
+}
+.servicos-list li {
+  display: inline-block; margin: 0 20px;
+  font-weight: 600; position: relative;
+}
+.servicos-list li::after {
+  content: ""; display: block;
+  width: 0; height: 3px; background: #3e2723;
+  margin: 4px auto 0; transition: width 0.3s;
+}
+.servicos-list li:hover::after { width: 60%; }
+.servicos-photos {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 15px; margin-top: 20px;
+}
+.servicos-photos img {
+  max-width: 30%; border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.servicos-photos img:hover { transform: translateY(-5px); }
+#noticias {
+  padding: 40px 20px; text-align: center;
+}
+.noticias-list {
+  list-style: none; padding: 0; max-width: 600px; margin: auto;
+}
+.noticias-list li {
+  margin: 12px 0; text-align: left;
+  border-left: 4px solid #3e2723; padding-left: 12px;
+}
+#contato { padding: 40px 20px; text-align: center; }
 footer {
-  background: #3e2723;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
+  background: #3e2723; color: #fff;
+  text-align: center; padding: 20px;
 }

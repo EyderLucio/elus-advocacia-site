@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELUS Eyder Lucio dos Santos | Advocacia e Consultoria Jurídica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="logo-elus.png" alt="Logo ELUS" class="logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#noticias">Notícias</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+    <div class="hero-content">
+      <h1>ELUS</h1>
+      <h2>Eyder Lucio dos Santos</h2>
+      <p>Advocacia e Consultoria Jurídica</p>
+      <p>“Buscai primeiro o Reino de Deus e a sua justiça, e tudo mais vos será dado por acréscimo.”<br>
+      <em>(Mateus 6,33 – Vulgata, trad. Pe. Matos Soares)</em></p>
+      <a href="https://wa.me/44998902591" class="btn">
+        <img src="WhatsApp.svg.webp" alt="WhatsApp" class="whatsapp-icon"> Fale no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre-bio">
+    <div class="bio-text">
+      <h2>Sobre Nós</h2>
+      <p><strong>Eyder Lucio dos Santos</strong><br>
+      Advogado regularmente inscrito na OAB/PR sob o nº 35.300, com escritório próprio em Maringá-PR desde 2009. Dedica-se à defesa dos interesses de pessoas físicas e jurídicas, com atuação destacada nas áreas de Direito Cível, Trabalhista e Previdenciário.</p>
+      <p>Pós-graduado em Direito Aplicado e bacharel em Direito pela Universidade Estadual de Maringá (UEM), alia sólida formação acadêmica a mais de uma década de experiência prática, oferecendo soluções jurídicas eficazes, personalizadas e éticas.</p>
+    </div>
+    <div class="bio-img">
+      <img src="foto-eyder.png" alt="Eyder Lucio dos Santos" class="img-fluid small-photo">
+    </div>
+  </section>
+
+  <section id="servicos">
+    <h2>Áreas de Atuação</h2>
+    <ul class="servicos-list">
+      <li>Direito Civil</li>
+      <li>Direito Trabalhista</li>
+      <li>Direito Previdenciário</li>
+    </ul>
+    <div class="servicos-photos">
+      <img src="pexels-kampus-8441783.jpg" alt="" class="img-fluid">
+      <img src="pexels-pixabay-416320.jpg" alt="" class="img-fluid">
+      <img src="pexels-sora-shimazaki-5668473.jpg" alt="" class="img-fluid">
+    </div>
+  </section>
+
+  <section id="noticias">
+    <h2>Notícias Jurídicas</h2>
+    <ul class="noticias-list">
+      <li><strong>28/06/2025:</strong> STF decide sobre novo entendimento de benefícios previdenciários.</li>
+      <li><strong>27/06/2025:</strong> Reforma trabalhista: principais pontos discutidos no Congresso.</li>
+      <li><strong>25/06/2025:</strong> STJ estabelece novas diretrizes para contratos de consumo.</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: eydersantosmga@gmail.com</p>
+    <p>WhatsApp: <a href="https://wa.me/44998902591">(44) 99890-2591</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 ELUS Eyder Lucio dos Santos | Advocacia e Consultoria Jurídica
+  </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("section").forEach(sec => {
+      sec.style.opacity = 0;
+      sec.style.transition = "opacity 0.8s ease-out";
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = 1;
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      obs.observe(sec);
+    });
+  });
+  </script>
+
+</body>
+</html>
