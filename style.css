@@ -125,3 +125,39 @@ footer {
   margin-top:40px;
 }
 a { color:#3f2f1f; }
+
+.contato-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contato-info {
+  flex: 1 1 300px;
+  min-width: 260px;
+  font-family: Georgia, serif;
+  line-height: 1.5;
+}
+
+.contato-info h2 {
+  margin-top: 0;
+}
+
+.contato-image {
+  flex: 1 1 300px;
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.contato-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
