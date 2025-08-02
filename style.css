@@ -219,3 +219,16 @@ a { color:#3f2f1f; }
 .bio-profissional strong {
   display: inline; /* o nome já está em destaque sem alterar muito o fluxo */
 }
+
+/* diminuir espaço entre o título "Quem sou" e o parágrafo */
+#sobre h3 {
+  margin-top: 1rem;    /* reduz espaço acima, se for necessário */
+  margin-bottom: 4px;  /* espaço menor abaixo do título */
+}
+
+/* garantir que o primeiro parágrafo da bio não tenha top margin extra */
+.bio-profissional p:first-of-type,
+#sobre p {
+  margin-top: 0;
+  margin-bottom: 0.8em; /* ajuste fino entre parágrafos */
+}
